@@ -4,6 +4,7 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/gorilla/mux"
 	"github.com/pyankovzhe/http-rest-api/internal/app/store"
 	"github.com/sirupsen/logrus"
 )
@@ -44,7 +45,9 @@ func (s *APIServer) configureLogger() error {
 		return err
 	}
 
-	s.logger.setLevel(level)
+	s.logger.SetLevel(level)
+
+	return nil
 }
 
 func (s *APIServer) configureRouter() {
@@ -62,7 +65,7 @@ func (s *APIServer) configureStore() error {
 	return nil
 }
 
-func (s *APIServer) handleHello() http.HandleFunc {
+func (s *APIServer) handleHello() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		io.WriteString(w, "Hello")
 	}

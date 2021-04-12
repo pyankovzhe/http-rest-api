@@ -1,2 +1,5 @@
-bind_addr = ":8080"
+bind_addr = ":3000"
 log_level = "debug"
+
+[store]
+database_url = "host=localhost port=5432 user=postgres password=postgres dbname=rest_api_dev sslmode=disable"

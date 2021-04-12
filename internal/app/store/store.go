@@ -1,6 +1,10 @@
 package store
 
-import "database/sql"
+import (
+	"database/sql"
+
+	_ "github.com/lib/pq"
+)
 
 type Store struct {
 	config *Config
@@ -11,7 +15,6 @@ func New(config *Config) *Store {
 	return &Store{
 		config: config,
 	}
-
 }
 
 func (s *Store) Open() error {
