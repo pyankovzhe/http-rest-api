@@ -4,6 +4,7 @@ import (
 	"database/sql"
 
 	_ "github.com/lib/pq"
+	"github.com/pyankovzhe/http-rest-api/internal/app/store"
 )
 
 type Store struct {
