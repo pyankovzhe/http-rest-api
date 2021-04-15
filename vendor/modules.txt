@@ -1,0 +1,36 @@
+# github.com/BurntSushi/toml v0.3.1
+## explicit
+github.com/BurntSushi/toml
+# github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
+## explicit
+github.com/asaskevich/govalidator
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/go-ozzo/ozzo-validation v3.6.0+incompatible
+## explicit
+github.com/go-ozzo/ozzo-validation
+github.com/go-ozzo/ozzo-validation/is
+# github.com/gorilla/mux v1.8.0
+## explicit
+github.com/gorilla/mux
+# github.com/lib/pq v1.10.0
+## explicit
+github.com/lib/pq
+github.com/lib/pq/oid
+github.com/lib/pq/scram
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/sirupsen/logrus v1.8.1
+## explicit
+github.com/sirupsen/logrus
+# github.com/stretchr/testify v1.2.2
+## explicit
+github.com/stretchr/testify/assert
+# golang.org/x/crypto v0.0.0-20210322153248-0c34fe9e7dc2
+## explicit
+golang.org/x/crypto/bcrypt
+golang.org/x/crypto/blowfish
+# golang.org/x/sys v0.0.0-20201119102817-f84b799fce68
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
