@@ -1,6 +1,7 @@
 package apiserver
 
 import (
+	"context"
 	"encoding/json"
 	"errors"
 	"net/http"
@@ -13,8 +14,11 @@ import (
 )
 
 const (
-	sessionName = "gorestapiapp"
+	sessionName        = "gorestapiapp"
+	ctxKeyUser  ctxKey = iota
 )
+
+type ctxKey int8
 
 var (
 	errIncorrectEmailOrPassword = errors.New("incorrect email or password")
@@ -69,7 +73,7 @@ func (s *server) authenticateUser(next http.Handler) http.Handler {
 			s.error(w, r, http.StatusUnauthorized, errNotAuthenticated)
 		}
 
-		next.ServeHTTP(w, r)
+		next.ServeHTTP(w, r.WithContext(context.WithValue(r.Context(), ctxKeyUser, u)))
 	})
 }
 
