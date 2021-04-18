@@ -69,6 +69,7 @@ func (s *server) authenticateUser(next http.Handler) http.Handler {
 		}
 
 		u, err := s.store.User().Find(id.(int))
+
 		if err != nil {
 			s.error(w, r, http.StatusUnauthorized, errNotAuthenticated)
 		}
